@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import blogPosts from '../blogData/page';
+import blogPosts from '../blogData/page'; // Ensure this path is correct
 
 const BlogPage = () => {
   return (
@@ -12,7 +12,7 @@ const BlogPage = () => {
           Explore our latest insights, guides, and tutorials written by industry experts.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map(post => (
+          {blogPosts.map((post) => (
             <div
               key={post.id}
               className="bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden"
@@ -30,8 +30,8 @@ const BlogPage = () => {
                 <p className="text-gray-600 text-base line-clamp-3">
                   {post.excerpt}
                 </p>
-                <Link href={`../blog/${post.id}`}>
-                  <span className="text-blue-500 hover:text-blue-600 font-medium mt-4 block">
+                <Link href={`/blog/${post.id}`}>
+                  <span className="text-blue-500 hover:text-blue-600 font-medium mt-4 block cursor-pointer">
                     Read More →
                   </span>
                 </Link>

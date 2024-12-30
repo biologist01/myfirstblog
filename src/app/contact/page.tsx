@@ -71,7 +71,7 @@ export default function ContactUs() {
                 value={formData.firstName}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 hover:shadow-md transition duration-300"
+                className="w-full px-4 py-3 border text-black border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 hover:shadow-md transition duration-300"
               />
             </div>
             <div className="flex-1">
@@ -89,7 +89,7 @@ export default function ContactUs() {
                 value={formData.lastName}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 hover:shadow-md transition duration-300"
+                className="w-full px-4 py-3 border text-black border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 hover:shadow-md transition duration-300"
               />
             </div>
           </div>
@@ -109,7 +109,7 @@ export default function ContactUs() {
                 value={formData.country}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 hover:shadow-md transition duration-300"
+                className="w-full px-4 py-3 border text-black border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 hover:shadow-md transition duration-300"
               >
                 <option value="">Select your country</option>
                 {countries.map((country, index) => (
@@ -134,7 +134,7 @@ export default function ContactUs() {
                 value={formData.phoneCode}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 hover:shadow-md transition duration-300"
+                className="w-full px-4 py-3 border text-black border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 hover:shadow-md transition duration-300"
               >
                 <option value="">Select phone code</option>
                 {phoneCodes.map((code, index) => (
@@ -161,7 +161,7 @@ export default function ContactUs() {
               value={formData.phoneNumber}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 hover:shadow-md transition duration-300"
+              className="w-full px-4 py-3 border text-black border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 hover:shadow-md transition duration-300"
             />
           </div>
 
@@ -180,7 +180,7 @@ export default function ContactUs() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 hover:shadow-md transition duration-300"
+              className="w-full px-4 py-3 border text-black border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 hover:shadow-md transition duration-300"
             />
           </div>
 
