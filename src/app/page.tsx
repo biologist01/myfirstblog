@@ -55,7 +55,7 @@ export default function Home() {
             </h4>
             <p className="text-gray-700 leading-relaxed mb-6">
               I envision a world where genetic engineering becomes an accessible
-              tool for solving humanity's most pressing problems, from curing
+              tool for solving humanity&apos;s most pressing problems, from curing
               genetic disorders to ensuring food security for a growing global
               population. By demystifying the science behind genetic
               engineering, I hope to make it less intimidating and more

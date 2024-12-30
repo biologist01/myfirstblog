@@ -1,9 +1,17 @@
-'use client';
-import React from "react";
+"use client";
 import { useState } from "react";
 
+interface FormData {
+  firstName: string;
+  lastName: string;
+  country: string;
+  phoneCode: string;
+  phoneNumber: string;
+  email: string;
+}
+
 export default function ContactUs() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
     country: "",
@@ -15,7 +23,7 @@ export default function ContactUs() {
   const countries = ["United States", "Canada", "United Kingdom", "Pakistan", "India", "Australia"];
   const phoneCodes = ["+1", "+44", "+92", "+91", "+61"];
 
-  const handleChange = (e:any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -23,7 +31,7 @@ export default function ContactUs() {
     });
   };
 
-  const handleSubmit = (e:any) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     alert("Form submitted successfully!");
   };
@@ -38,7 +46,7 @@ export default function ContactUs() {
           Contact Us
         </h1>
         <p
-          className="text-center  mb-8"
+          className="text-center text-gray-600 mb-8"
           style={{ fontFamily: "'Roboto', sans-serif" }}
         >
           We would love to hear from you! Please fill out the form below.
@@ -63,7 +71,7 @@ export default function ContactUs() {
                 value={formData.firstName}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border text-black border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 hover:shadow-md transition duration-300"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 hover:shadow-md transition duration-300"
               />
             </div>
             <div className="flex-1">
@@ -81,7 +89,7 @@ export default function ContactUs() {
                 value={formData.lastName}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border text-black border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 hover:shadow-md transition duration-300"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 hover:shadow-md transition duration-300"
               />
             </div>
           </div>
@@ -101,7 +109,7 @@ export default function ContactUs() {
                 value={formData.country}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 hover:shadow-md transition duration-300 text-black"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 hover:shadow-md transition duration-300"
               >
                 <option value="">Select your country</option>
                 {countries.map((country, index) => (
@@ -126,7 +134,7 @@ export default function ContactUs() {
                 value={formData.phoneCode}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 hover:shadow-md transition duration-300 text-black"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 hover:shadow-md transition duration-300"
               >
                 <option value="">Select phone code</option>
                 {phoneCodes.map((code, index) => (
@@ -147,13 +155,13 @@ export default function ContactUs() {
               Phone Number
             </label>
             <input
-              type="number"
+              type="text"
               id="phoneNumber"
               name="phoneNumber"
               value={formData.phoneNumber}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 hover:shadow-md transition duration-300 text-black"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 hover:shadow-md transition duration-300"
             />
           </div>
 
@@ -172,7 +180,7 @@ export default function ContactUs() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 hover:shadow-md transition duration-300 text-black"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 hover:shadow-md transition duration-300"
             />
           </div>
 
