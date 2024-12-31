@@ -1,7 +1,7 @@
 "use client"
 import blogPosts from '../../blogData/page';
 import { useState } from 'react';
-import CommentSection from '../../../components/Comment';
+import CommentSection from '@/components/Comment';
 
 const BlogPost = ({ params }: { params: { blog: string } }) => {
   const blog = params.blog;

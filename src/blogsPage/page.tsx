@@ -1,6 +1,9 @@
 // import Link from 'next/link';
 // import blogPosts from '../blogData/page'; // Ensure this path is correct
 
+import blogPosts from "@/blogData/page";
+import Link from "next/link";
+
 const BlogPage = () => {
   return (
     <div className="bg-gray-50 min-h-screen">
