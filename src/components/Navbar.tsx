@@ -18,7 +18,7 @@ export default function Navbar() {
               </Link> */}
             </li>
             <li>
-              <Link href="../blogsPage">
+              <Link href="@/blogsPage">
                 <span className=" px-4 py-2 hover:bg-pink-700 rounded cursor-pointer">Blog</span>
               </Link>
             </li>
